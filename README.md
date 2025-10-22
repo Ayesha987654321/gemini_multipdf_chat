@@ -1,7 +1,8 @@
 # DataDive Document Retrieval System:
 
 DataDive is a Streamlit-based application that allows users to chat with a conversational AI model trained on PDF documents. The chatbot extracts information from uploaded PDF files and answers user questions based on the provided context.
-<https://github.com/kaifcoder/gemini_multipdf_chat/assets/57701861/f6a841af-a92d-4e54-a4fd-4a52117e17f6>
+🎥 **Demo Video**: [Watch on GitHub](https://github.com/kaifcoder/gemini_multipdf_chat/assets/57701861/f6a841af-a92d-4e54-a4fd-4a52117e17f6)
+
 <https://gmultichat.streamlit.app/>
 
 ## Features
