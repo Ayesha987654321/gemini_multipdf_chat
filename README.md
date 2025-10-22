@@ -1,104 +1,116 @@
-# Gemini PDF Chatbot
+DataDive Document Retrieval System
 
-Gemini PDF Chatbot is a Streamlit-based application that allows users to chat with a conversational AI model trained on PDF documents. The chatbot extracts information from uploaded PDF files and answers user questions based on the provided context.
-<https://gmultichat.streamlit.app/>
+DataDive is a Streamlit-based application that enables users to interact with a conversational AI trained on PDF documents. By uploading PDF files, users can extract text content and ask questions that are answered using contextual understanding powered by Google’s Gemini AI.
 
-<https://github.com/kaifcoder/gemini_multipdf_chat/assets/57701861/f6a841af-a92d-4e54-a4fd-4a52117e17f6>
+🔗 Live Demo: Launch App
 
-## Features
+🎥 Demo Video: Watch on GitHub
 
-- **PDF Upload:** Users can upload multiple PDF files.
-- **Text Extraction:** Extracts text from uploaded PDF files.
-- **Conversational AI:** Uses the Gemini conversational AI model to answer user questions.
-- **Chat Interface:** Provides a chat interface to interact with the chatbot.
+🚀 Features
 
-## Getting Started
+📄 Multi-PDF Upload – Upload and process multiple PDF files.
 
-If you have docker installed, you can run the application using the following command:
+🧠 Contextual AI Chat – Ask questions based on document content.
 
-- Obtain a Google API key and set it in the `.env` file.
+🔍 Text Extraction – Automatically extracts and embeds text from uploaded PDFs.
 
-   ```.env
-   GOOGLE_API_KEY=your_api_key_here
-   ```
+💬 Chat Interface – Interact with an AI assistant through an easy-to-use chat UI.
 
-```bash
+⚙️ Getting Started with Docker
+1. Set your API Key
+
+Create a .env file with your Google API key
+:
+
+GOOGLE_API_KEY=your_api_key_here
+
+2. Run with Docker Compose
 docker compose up --build
-```
 
-Your application will be available at <http://localhost:8501>.
 
-### Deploying your application to the cloud
+The app will be accessible at:
+👉 http://localhost:8501
 
-First, build your image, e.g.: `docker build -t myapp .`.
-If your cloud uses a different CPU architecture than your development
-machine (e.g., you are on a Mac M1 and your cloud provider is amd64),
-you'll want to build the image for that platform, e.g.:
-`docker build --platform=linux/amd64 -t myapp .`.
+☁️ Deploying to the Cloud
 
-Then, push it to your registry, e.g. `docker push myregistry.com/myapp`.
+To deploy the app on a remote server:
 
-Consult Docker's [getting started](https://docs.docker.com/go/get-started-sharing/)
-docs for more detail on building and pushing.
+Build the Docker Image:
 
-### References
+docker build -t datadive-app .
 
-- [Docker's Python guide](https://docs.docker.com/language/python/)
 
-## Local Development
+If deploying to a platform with a different CPU architecture (e.g., Mac M1 to amd64 server):
 
-Follow these instructions to set up and run this project on your local machine.
+docker build --platform=linux/amd64 -t datadive-app .
 
-   **Note:** This project requires Python 3.10 or higher.
 
-1. **Clone the Repository:**
+Push to Container Registry:
 
-   ```bash
-   git clone https://github.com/your-username/gemini-pdf-chatbot.git
-   ```
+docker push myregistry.com/datadive-app
 
-2. **Install Dependencies:**
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+More on this: Docker’s Getting Started Guide
 
-3. **Set up Google API Key:**
-   - Obtain a Google API key and set it in the `.env` file.
+💻 Local Development
+Requirements:
 
-   ```bash
-   GOOGLE_API_KEY=your_api_key_here
-   ```
+Python 3.10 or higher
 
-4. **Run the Application:**
+Steps:
 
-   ```bash
-   streamlit run main.py
-   ```
+Clone the Repository:
 
-5. **Upload PDFs:**
-   - Use the sidebar to upload PDF files.
-   - Click on "Submit & Process" to extract text and generate embeddings.
+git clone https://github.com/your-username/datadive-document-retrieval.git
+cd datadive-document-retrieval
 
-6. **Chat Interface:**
-   - Chat with the AI in the main interface.
 
-## Project Structure
+Install Dependencies:
 
-- `app.py`: Main application script.
-- `.env`: file which will contain your environment variable.
-- `requirements.txt`: Python packages required for working of the app.
-- `README.md`: Project documentation.
+pip install -r requirements.txt
 
-## Dependencies
 
-- PyPDF2
-- langchain
-- Streamlit
-- google.generativeai
-- dotenv
+Set API Key:
 
-## Acknowledgments
+Create a .env file with:
 
-- [Google Gemini](https://ai.google.com/): For providing the underlying language model.
-- [Streamlit](https://streamlit.io/): For the user interface framework.
+GOOGLE_API_KEY=your_api_key_here
+
+
+Run the App Locally:
+
+streamlit run main.py
+
+
+Upload PDFs & Start Chatting:
+
+Use the sidebar to upload PDFs.
+
+Click "Submit & Process" to begin chatting with your document-based AI assistant.
+
+📁 Project Structure
+datadive-document-retrieval/
+├── app.py               # Main application script
+├── .env                 # Environment variable file
+├── requirements.txt     # Dependency list
+├── README.md            # Project documentation
+
+📦 Dependencies
+
+PyPDF2 – PDF parsing and extraction
+
+langchain – LLM orchestration
+
+Streamlit – Web interface framework
+
+google.generativeai – Access to Gemini model
+
+dotenv – Environment variable management
+
+🙏 Acknowledgments
+
+Google Gemini
+ – Conversational AI backbone.
+
+Streamlit
+ – Simplified UI for ML apps.
